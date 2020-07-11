@@ -2,7 +2,7 @@
 
 /*获取根元素HTML  以变量的形式设置基本样式  后面用var使用*/
 :root {
-  --color-text: #666;
+  --color-text: #FFFFFF;
   --color-high-text: #ff5777;
   --color-tint: #ff8198;
   --color-background: #fff;
@@ -25,6 +25,7 @@ body {
   background: var(--color-background);
   color: var(--color-text);
   width: 100vw;
+  overflow-x: hidden;   /*取消页面横向水平滚动轴  这个网页一般要设置 移动端看情况  但是这种解决方案不是最佳方案 解决方案是定义滚动条浮在页面之上 这样达到最好的显示效果*/
 }
 
 a {
@@ -64,4 +65,34 @@ a {
 .right {
   float: right;
 }
+
+/*以下为滚动条样式*/
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+  width: 1px;     /*因为解决不了滚动条悬浮于页面之上的问题 这里先缩小它*/
+  /*height: 10px;*/ /*无效 高度是随页面内容多少自动决定的   还有就是这样的原因是我们设置的是垂直的滚动条 竖直的话 */
+  background-color: #222222;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+  display: none;
+}
+
+/*定义上下两端按钮样式*/
+::-webkit-scrollbar-button{
+  background-color: #222222;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  /*-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);*/  /*定义滚动条某一部分的阴影相关的方法*/
+  background-color: #353b48;
+}
+
+
 

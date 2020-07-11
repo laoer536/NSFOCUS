@@ -28,6 +28,12 @@
 
 <style scoped>
   #Bar {
+    position: fixed; /*固定位置  悬浮*/
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;    /*设置显示层级 数值越大 越上层*/
+
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     box-shadow: 0px 1px 2px rgba(34,34,34,0.5);
