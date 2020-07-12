@@ -175,7 +175,7 @@
 
 <style scoped>
   .SolutionsBase{
-    background-image: url("../../assets/img/solutionBg.png");
+    background-image: url("../../assets/img/common/solutionBg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;   /*使图片完美铺满盒子*/
     height: 200px;

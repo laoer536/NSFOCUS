@@ -1,7 +1,7 @@
 <template>
   <div class="foot">   <!--最后部分-->
     <div class="firstColumn">
-      <div class="footLogo"><img src="../../assets/img/logo.png"></div>
+      <div class="footLogo"><img src="../../assets/img/common/logo.png"></div>
       <div class="describe">
         <footer>
           <a>网站地图</a>
@@ -55,11 +55,20 @@
       </div>
 
       <div class="footFormRight">
-        <dt><span class="footIcon"><img src="../../assets/img/foot/微信.png"> <img src="../../assets/img/foot/QQ.png"></span></dt>
+        <dt>
+          <span class="footIcon">
+          <img src="../../assets/img/foot/micro-blog.png" @click="showWb">
+          <img src="../../assets/img/foot/WeChat.png" @click="showWx">
+          </span>
+        </dt>
         <dt>服务热线<span>400-818-6868</span></dt>
         <dt>服务时间<span>7*24小时</span></dt>
       </div>
 
+      <div class="QRcode">
+        <div id="wb" v-show="wbActive"> <img src="../../assets/img/foot/wb二维码.png"></div>
+        <div id="wx" v-show="wxActive"> <img src="../../assets/img/foot/wx二维码.png"></div>
+      </div>
 
     </div>
 
@@ -70,7 +79,27 @@
 
 <script>
   export default {
-    name: "Foot"
+    name: "Foot",
+    data() {
+      return {
+        wbActive: false,
+        wxActive: false
+      }
+    },
+    methods: {
+      showWb (){
+       return  [
+           this.wbActive = !this.wbActive,
+           this.wxActive = false
+       ]
+  },
+      showWx () {
+       return  [
+         this.wxActive = !this.wxActive,
+         this.wbActive = false   /*保证两者不同时出现*/
+       ]
+      }
+    }
   }
 </script>
 
@@ -120,7 +149,7 @@
     padding: 20px 15% 20px 15%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr;
   }
 
   .footForm dt{
@@ -146,6 +175,7 @@
     width: 52px;
     height: 52px;
     margin-top: 0px;
+    cursor: pointer;    /*鼠标移入变手掌可点击样式*/
   }
 
 
@@ -163,4 +193,11 @@
     color: #6B6C6C;
     margin-top: 10px;
   }
+
+  .QRcode img{
+    margin-top: 0px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
 </style>

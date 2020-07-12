@@ -6,8 +6,8 @@
   <rotation-chart-base></rotation-chart-base>
 
 
-    <img src="../../assets/img/绿盟科技2.0.png">
-    <img src="../../assets/img/流程脑图.png">           <!--绿盟科技2.0-->
+    <img src="../../assets/img/common/绿盟科技2.0.png">
+    <img src="../../assets/img/common/流程脑图.png">           <!--绿盟科技2.0-->
 
     <show-solution-aspects></show-solution-aspects>   <!-- 绿盟安全2.0部分介绍-->
 
