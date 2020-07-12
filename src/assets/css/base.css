@@ -3,8 +3,8 @@
 /*获取根元素HTML  以变量的形式设置基本样式  后面用var使用*/
 :root {
   --color-text: #FFFFFF;
-  --color-high-text: #ff5777;
-  --color-tint: #ff8198;
+  --color-high-text: #222222;
+  --color-tint: #6fba2c;
   --color-background: #fff;
   --font-size: 14px;
   --line-height: 1.5;

@@ -3,7 +3,6 @@
     <el-carousel  height="900px">
       <el-carousel-item v-for="item in imagebox" :key="item.id">
         <img :src="item.idView" class="image">
-          <!--指的是轮播图下面的横线-->
       </el-carousel-item>
     </el-carousel>
   </div>

@@ -1,7 +1,7 @@
 <template>
   <div id="Bar">
     <div class="leftIcon">
-      <div class="logo"><slot name="logo"></slot></div>
+      <div class="logo" @click="backHome"><slot name="logo"></slot></div>
     </div>
 
     <div class="centerMenu">
@@ -22,7 +22,18 @@
 
 <script>
   export default {
-    name: "Bar"
+    name: "Bar",
+    props: {
+      path: {
+        type: String,
+        require: true
+      }
+    },
+    methods: {
+      backHome() {
+        this.$router.push('/home')
+      }
+    }
   }
 </script>
 
@@ -52,6 +63,7 @@
     height: 32px;
     margin-top: 7px;
     margin-left: 40px;
+    cursor: pointer;             /*鼠标移入logo后变可点击样式*/
   }                             /*定义左边logo部分*/
 
   .centerMenu{
