@@ -13,10 +13,10 @@
     name: "RotationChartBase",
     data(){
       return {
-        imagebox:[{id:0,idView:require('../../assets/img/RotationChartBaseUse/轮播图1.jpg')},
-          {id:1,idView:require('../../assets/img/RotationChartBaseUse/轮播图2.jpg')},
-          {id:2,idView:require('../../assets/img/RotationChartBaseUse/轮播图3.jpg')},
-          {id:3,idView:require('../../assets/img/RotationChartBaseUse/轮播图4.jpg')}
+        imagebox:[{id:0,idView:require('@/assets/img/RotationChartBaseUse/轮播图1.jpg')},
+          {id:1,idView:require('@/assets/img/RotationChartBaseUse/轮播图2.jpg')},
+          {id:2,idView:require('@/assets/img/RotationChartBaseUse/轮播图3.jpg')},
+          {id:3,idView:require('@/assets/img/RotationChartBaseUse/轮播图4.jpg')}
           //imagebox是assets下一个放图片的文件夹
         ]
       }

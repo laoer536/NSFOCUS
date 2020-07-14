@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/home/Home.vue'
+
+const Home = () => import('../views/home/Home.vue')
 
 Vue.use(VueRouter)
 
   const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+      path: '/',
+      redirect: '/home'
   },
     {
       path: '/home',
@@ -18,8 +18,8 @@ Vue.use(VueRouter)
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  /*mode: 'history',
+  base: process.env.BASE_URL,*/     /*这里为什么要注释掉，因为只有使用vue默认的hash模式才行，当然只是如果要发布就要这样子来，自己运行可以不注释掉*/
   routes
 })
 

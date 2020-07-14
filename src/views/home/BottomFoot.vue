@@ -1,7 +1,7 @@
 <template>
   <div class="foot">   <!--最后部分-->
     <div class="firstColumn">
-      <div class="footLogo"><img src="../../assets/img/common/logo.png"></div>
+      <div class="footLogo"><img src="@/assets/img/common/logo.png"></div>
       <div class="describe">
         <footer>
           <a>网站地图</a>
